@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html ng-app="fl">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script type = "jQueryFile.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Title</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+    <script src = "react.js"></script>
+    <script src = "react-dom.js"></script>
+  </head>
+  <body ng-controller="MainCtrl" ng-init="init()">
+  
+  <header class="header"><h1>CoronaVirus Website: Centralized and Targeted for Oregonions</h1></header> 
+  <main>
+      <br>
+      <strong>
+      <script>
+        document.write('The current data and time is ');
+        var time = new Date();
+        document.write(time);
+      </script>
+      </strong>
+
+       <h1> <section class="background-secondary">CoronaVirus Website</section> </h1>
+       <p> <em>  At this time it is very important to stay home! </em></p>
+       <h2> <section class="background-tertiary">Image and Text Content</section> </h2>
+       <h3> <section class ="background-secondary">Featured Content</section> </h3>
+       <h4> <section class="background-primary">Testimonial Content</section> </h4>
+       <h5> <section class="background-secondary">Media Objects</section> </h5>
+       <h6><section class="background-tertiary">More Content</section> </h6>
+       
+        <hr>
+
+        <br> CoronaVirus Scalar:
+        <input type = "range" name = "CovidScale" min = "0" max = "1000">
+
+        <br>
+
+        <br> Country:
+        <input type = "text" name = "CovidCountry">
+        <br> State:
+        <input type = "text" name = "CovidState">
+        <br> City:
+        <input type = "text" name = "CovidCity">
+        <br> County:
+        <input type = "text" name = "CovidState">
+
+        <hr>
+
+        <br> Race:
+        <br>
+        <input type = "radio"
+               name = "raceOptions"
+                value = "white">White
+        <input type = "radio"
+                name = "raceOptions"
+                 value = "hispanic">Hispanic
+        <input type = "radio"
+                name = "black">Black
+        <input type = "radio"
+                name = "raceOptions"
+                value = "other">Other
+
+      <br>
+      <hr>
+      <br>
+      <br> Color on the Map:
+      <input type = "color" name = "mapColor">
+      <br>
+      <br>
+      CoronaVirus: Submission:
+      <br>
+      <input type = "file" name = "CoronaVirus PreCreated File">
+
+      <br>
+      <br>
+      <strong>
+      
+      <input type = "submit" value = "RETURN">
+      <input type = "reset"  value = "RESET">
+
+      </strong>
+
+      <br>
+      <br>
+
+      <button id = "apply">APPLY CHANGES!</button>
+      <p>
+      <span id = "numClicks"> You have NOT applied any changes!</span>
+      <script>
+      var clicked = 0;
+      function clickHandler()
+      {
+        var numClicksSpan = document.getElementById('numClicks');
+        numClicksSpan.innerHTML = 'You have applied the changes!';
+      }
+      var button = document.getElementById('apply');
+      button.addEventListener('click', clickHandler);
+
+      </script>
+      </p>
+      <br>
+      <hr>
+      <br>
+      <div id = "mouseOverMe"> Put the mouse here! </div> <p>
+      <div class = "highlightText"> This is some text. </div> <p>
+      <div> This is some other text.</div> <p>
+      <div class = "highlightText"> This text is import aswell.</div>
+      <script>
+        function makeBold()
+        {
+          var divs = document.getElementsByClassName('highlightText');
+          for (var i = 0; i < divs.length; i++)
+          {
+            divs[i].style.color = 'red';
+            divs[i].style.fontWeight = 'bold';
+          }
+        }
+        function restore()
+        {
+          var divs = document.getElementsByClassName('highlightText');
+          for (var i = 0; i < divs.length; i++)
+          {
+            divs[i].style.color = 'black';
+            divs[i].style.fontWeight = 'normal';
+          }
+        }
+        
+        var mouseOverMeDiv = document.getElementById('mouseOverMe');
+        mouseOverMeDiv.addEventListener('mouseover', makeBold);
+        mouseOverMeDiv.addEventListener('mouseout', restore);
+      </script>
+      </p>
+      <input id = "nameInput"> </input>
+      <p>
+      Hello, <span id = "nameField"> guest</span>
+      <script>
+        function nameHandler(e)
+        {
+          if (e.keyCode == 13)
+          var nameInput = document.getElementById('nameInput');
+          var nameField = document.getElementById('nameField');
+          nameField.innerHTML = nameInput.value;
+          nameField.style.backgroundColor = 'cyan';
+          nameField.style.textTransform = 'capitalize';
+        }
+      
+      document.addEventListener('keyup', nameHandler);
+
+    </script>
+
+    <hr>
+    <input id = "itemField"> </input>
+    <p>
+
+    <ul>
+      <span id = "list"> </span>
+    </ul>
+
+    <script>
+    function keyPressHandler(e)
+    {
+      if (e.keyCode == 13)
+      {
+        $('#list').append('<li>' + $('#itemField').val() + '</li>')
+        $('#itemField').val('');
+      }
+    }
+    $('#itemField').keyup(keyPressHandler);
+    </script>
+
+    <ul>
+    <li>Cases</li>
+    <li>Trend</li>
+    <li>Facts</li>
+    <li>Tips</li>
+    </ul>
+
+    <script>
+    $('li').mouseenter(function() {
+      $(this).css('color', 'red');
+      $(this).css('font-size', '120%');
+    });
+    $('li').mouseleave(function() {
+      $(this).css('color', 'black');
+      $(this).css('font-size', '100%');
+    });
+    </script>
+
+    </ul>
+
+  <hr>
+
+    <script type="text/javascript" src="./vendor/csv.js"></script>
+    <script type="text/javascript" src="./vendor/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="./vendor/angular.min.js"></script>
+    <script type="text/javascript" src="./vendor/firebase.js"></script>
+    <script type="text/javascript" src="./vendor/firebase-simple-login.js"></script>
+    <script type="text/javascript" src="./vendor/angularfire.js"></script>
+    <script type="text/javascript" src="./vendor/angular-strap.min.js"></script>
+    
+    <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/directives.js"></script>
+    <script type="text/javascript" src="./scripts/controllers.js"></script>
+    
+
+<p>
+<a href="page2.html" target="_self">"Important Steps to Prevent CoronaVirus!"</a>
+</p>
+
+<!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+</main>
+</body>
+</html>
