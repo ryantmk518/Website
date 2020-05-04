@@ -2,11 +2,11 @@
 <html ng-app="fl">
   <head>
      <div class="topnav">
-            <a class="active" href="#home">Main</a>
-             <a href="Blog.html">Blog</a>
-             <a href="page2.html">Tips</a>
-             <a href="About.html">Contact</a>
-             <a href="Cases.html">Cases and Stats</a>
+             <a style = font-family:monospace class="active" href="#home">Main</a>
+             <a style = font-family:monospace href="Blog.html">Blog</a>
+             <a style = font-family:monospace href="page2.html">Tips</a>
+             <a style = font-family:monospace href="About.html">Contact</a>
+             <a style = font-family:monospace href="Cases.html">Cases and Stats</a>
      </div>
      <br>
     <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
@@ -20,7 +20,7 @@
     <script src = "react-dom.js"></script>
   </head>
   <body ng-controller="MainCtrl" ng-init="init()">
-  <header class="header"><h1>CoronaVirus Website: Centralized and Targeted for Oregonians</h1></header> 
+  <header style = font-family:monospace class="header"><h1>CoronaVirus Website: Centralized and Targeted for Oregonians</h1></header> 
   <main>
 
     <script>
@@ -41,8 +41,8 @@
          padding: 0;
          display: block;
           margin: 0 auto;
-          width: 2000px; 
-          height: 400px;
+          width: 20000px; 
+          height: 410px;
           max-height: 100%;
           max-width: 100%;
           overflow: hidden;
@@ -67,21 +67,6 @@
       <div class="zoomBOut">
         <div class="zoomBIn"></div>
       </div>
-      <br>
-      <h1> <section class = "background-primary"> 
-      <strong>
-      <script>
-        document.write('The current date and time is:');
-        var time = new Date();
-        document.write(time);
-      </script>
-      </strong>
-     </section></h1>
-
-       <h2> <section class="background-secondary">This website serves a purpose to warn Oregonians of the pandemic of CoronaVirus, 
-       as well as to inform them of current precuations necessary.
-       </section> </h2>
-<br>
 
     <script type="text/javascript" src="./vendor/csv.js"></script>
     <script type="text/javascript" src="./vendor/jquery-2.0.3.min.js"></script>
@@ -98,9 +83,15 @@
 
 <h2> <section class="header">
 <strong>
-<p>
-Oregonians Helping Oregonians!
-</p>
+  <h1> 
+    <strong>
+    <script>
+      document.write('The current date and time is:');
+      var time = new Date();
+      document.write(time);
+    </script>
+    </strong>
+   </h1>
 </strong>  
 </section> 
 </h2>
