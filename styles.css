@@ -199,19 +199,19 @@ Theme Styles
 
 .leftcolumn {
   float: left;
-  width: 75%;
+  width: 60%;
 }
 
 /* Right column */
 .rightcolumn {
   float: left;
-  width: 25%;
+  width: 40%;
   padding-left: 20px;
 }
 
 /* Fake image */
 .fakeimg {
-  background-color: #aaa;
+  background-color: #1abc9c;
   width: 100%;
   padding: 20px;
 }
@@ -219,8 +219,8 @@ Theme Styles
 /* Add a card effect for articles */
 .card {
   background-color: white;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 /* Clear floats after the columns */
