@@ -1,12 +1,6 @@
-/***************************
-****************************
-Reset Styles
-****************************
-***************************/
 
 @import 'normalize.css';
 
-/* Change all elements to use border-box */
 
 html
 {
@@ -16,33 +10,6 @@ html
 {
     box-sizing: inherit;
 }
-
-/***************************
-****************************
-Base Styles
-****************************
-***************************/
-
-
-/***************************
-****************************
-Layout Styles
-****************************
-***************************/
-
-
-/***************************
-****************************
-Module Styles
-****************************
-***************************/
-
-
-/***************************
-****************************
-Theme Styles
-****************************
-***************************/
 
 .background-primary {
     background: #F7941E; /*Orange*/
@@ -88,46 +55,61 @@ Theme Styles
   }
 
   .header {
-    padding: 60px;
+    padding:40px;
+    min-height: 200px;
+    max-height: 20000000px;
+    min-width: 100%;
+    min-width: 100%;
     text-transform: uppercase;
     letter-spacing: 1pt;
     text-align: center;
     background: #1abc9c;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Oxygen Mono', monospace;
   }
 
   .header2 {
     padding: 30px;
+    min-height: 30% ;
+    min-width: 60% ;
+    max-height: 50;
     text-transform: uppercase;
     letter-spacing: 1pt;
     text-align: left;
     background: #1abc9c;
     color: white;
-    font-size: 30px;
+    font-size: 15px;
     font-family: 'Oxygen Mono', monospace;
   }
 
   .header4 {
     padding: 30px;
+    min-height: 30% ;
+    min-width: 60% ;
+    max-height: 50;
+
     text-transform: uppercase;
     letter-spacing: 1pt;
     text-align: left;
     background: #1abc9c;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Oxygen Mono', monospace;
   }
 
   .header3 {
     padding: 60px;
+    min-height: 30% ;
+    min-width: 60% ;
+    max-height: 50;
+
     text-transform: uppercase;
     letter-spacing: 1pt;
     text-align: left;
     background: #1abc9c;
     color: white;
-    font-size: 10px;
+    font-size: 15px;
     font-family: 'Oxygen Mono', monospace;
   }
 
@@ -242,5 +224,18 @@ Theme Styles
   .leftcolumn, .rightcolumn {
     width: 100%;
     padding: 0;
+  }
+}
+
+@media screen and (max-width : 480px) {
+  #clockdiv {
+     font-size: 18px;
+  }
+  #clockdiv > div {
+     padding: 4px;      
+  }
+   .smalltext{
+     padding-top: 2px;
+     font-size: 12px;
   }
 }
